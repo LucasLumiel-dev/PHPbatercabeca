@@ -11,10 +11,26 @@
     <h1>exercicio 1</h1>
     <form action="exercitation.php" method="post">
         <label>Qual idade tu tem?</label>
-        <input type="text" name="valor1" required minlength="3">
+        <input type="text" name="valor1" required minlength="2">
         <br>
         <button type="submit" name="botao"> enviar </button>
     </form>
+
+    <?php
+
+    $idade = $_POST["valor1"] ?? null;
+    
+    if ($idade < 18 && !is_null($idade)) {
+
+        echo "Mete o pé otaro";
+
+    }
+    elseif(!is_null($idade)) {
+
+        echo "Cardastro fazido";
+    }
+
+    ?>
     
 </body>
 </html>
